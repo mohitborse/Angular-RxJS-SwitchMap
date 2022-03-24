@@ -9,13 +9,13 @@ import { switchMap, map } from 'rxjs/operators';
 export class AppComponent {
   name = 'Angular ' + VERSION.major;
   getResponse(): Observable<any> {
-    return Observable.create((observer) => {
+    return new Observable((observer) => {
       observer.next({ name: 'Mohit' });
     });
   }
 
   getMResponse(): Observable<any> {
-    return Observable.create((observer) => {
+    return new Observable((observer) => {
       observer.next({ name: 'Rohit' });
     });
   }
